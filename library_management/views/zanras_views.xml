@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <!-- Genre Form View -->
+        <record id="view_zanras_form" model="ir.ui.view">
+            <field name="name">zanras.form</field>
+            <field name="model">biblioteka.zanras</field>
+            <field name="arch" type="xml">
+                <form string="Genre">
+                    <sheet>
+                        <group>
+                            <field name="pavadinimas"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Genre Tree View -->
+        <record id="view_zanras_tree" model="ir.ui.view">
+            <field name="name">zanras.tree</field>
+            <field name="model">biblioteka.zanras</field>
+            <field name="arch" type="xml">
+                <tree string="Genre">
+                    <field name="pavadinimas"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

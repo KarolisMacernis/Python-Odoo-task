@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <!-- Book Form View -->
+        <record id="view_knyga_form" model="ir.ui.view">
+            <field name="name">knyga.form</field>
+            <field name="model">biblioteka.knyga</field>
+            <field name="arch" type="xml">
+                <form string="Book">
+                    <sheet>
+                        <group>
+                            <field name="pavadinimas"/>
+                            <field name="aprasymas"/>
+                            <field name="puslapiu_skaicius"/>
+                            <field name="zanro_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Book Tree View -->
+        <record id="view_knyga_tree" model="ir.ui.view">
+            <field name="name">knyga.tree</field>
+            <field name="model">biblioteka.knyga</field>
+            <field name="arch" type="xml">
+                <tree string="Book">
+                    <field name="pavadinimas"/>
+                    <field name="puslapiu_skaicius"/>
+                    <field name="zanro_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Book Search View -->
+        <record id="view_knyga_search" model="ir.ui.view">
+            <field name="name">knyga.search</field>
+            <field name="model">biblioteka.knyga</field>
+            <field name="arch" type="xml">
+                <search string="Book">
+                    <field name="pavadinimas"/>
+                    <field name="zanro_ids"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

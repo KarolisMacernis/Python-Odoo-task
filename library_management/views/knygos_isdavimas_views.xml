@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <!-- Issuance Form View -->
+        <record id="view_knygos_isdavimas_form" model="ir.ui.view">
+            <field name="name">knygos_isdavimas.form</field>
+            <field name="model">biblioteka.knygos_isdavimas</field>
+            <field name="arch" type="xml">
+                <form string="Book Issuance">
+                    <sheet>
+                        <group>
+                            <field name="kontaktas_id"/>
+                            <field name="knygu_ids" widget="many2many_tags"/>
+                            <field name="pradzios_data"/>
+                            <field name="pabaigos_data"/>
+                            <field name="busena"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Issuance Tree View -->
+        <record id="view_knygos_isdavimas_tree" model="ir.ui.view">
+            <field name="name">knygos_isdavimas.tree</field>
+            <field name="model">biblioteka.knygos_isdavimas</field>
+            <field name="arch" type="xml">
+                <tree string="Book Issuance">
+                    <field name="kontaktas_id"/>
+                    <field name="pradzios_data"/>
+                    <field name="pabaigos_data"/>
+                    <field name="busena"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

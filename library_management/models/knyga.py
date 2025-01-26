@@ -7,4 +7,4 @@ class Knyga(models.Model):
     pavadinimas = fields.Char(string='Pavadinimas', required=True)
     aprasymas = fields.Text(string='Aprašymas')
     puslapiu_skaicius = fields.Integer(string='Puslapių skaičius')
-    zanro_id = fields.Many2many('biblioteka.zanras', string='Žanrai')
+    zanro_ids = fields.Many2many('biblioteka.zanras', string='Žanrai')
